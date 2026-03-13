@@ -1,72 +1,226 @@
-<main class="container-xl py-5">
-  <h2 class="text-center my-5">Contacto</h2>
+<main class="container-xl py-5" *transloco="let t">
+  <h2 class="text-center my-5">
+    {{ t('contact.title') }}
+  </h2>
 
   <div class="row justify-content-center">
-    <form class="col-md-8 needs-validation" novalidate>
-      <fieldset>
-        <legend class="bg-primary text-center text-white fs-2">Tus Datos</legend>
+    <form
+      class="col-md-8 needs-validation"
+      [formGroup]="contactoForm"
+      (ngSubmit)="onSubmit()"
+      novalidate
+    >
+      <fieldset class="mb-5">
+        <legend class="bg-primary text-center text-white fs-2 py-2 px-3">
+          {{ t('contact.sections.data') }}
+        </legend>
 
         <div class="mb-3">
-          <label class="form-label" for="nombre">Nombre:</label>
-          <input type="text" class="form-control" id="nombre" placeholder="Tu Nombre" required>
-          <span class="invalid-feedback">Hubo un error...</span>
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="asunto">Asunto:</label>
-          <input type="text" class="form-control" id="asunto" placeholder="Tu Asunto">
-          <span class="valid-feedback">Muy bien!!</span>
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="email">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Tu Email">
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="tel">Teléfono:</label>
-          <input type="tel" class="form-control" id="tel" placeholder="Tu Teléfono">
+          <label class="form-label" for="nombre">
+            {{ t('contact.fields.nombre.label') }}
+          </label>
+          <input
+            id="nombre"
+            type="text"
+            class="form-control"
+            formControlName="nombre"
+            [placeholder]="t('contact.fields.nombre.placeholder')"
+            [class.is-invalid]="hasError('nombre')"
+            [class.is-valid]="isValid('nombre')"
+          >
+          @if (hasError('nombre')) {
+            <div class="invalid-feedback">
+              @switch (getError('nombre')) {
+                @case ('required') { {{ t('contact.errors.nombre.required') }} }
+                @case ('minlength') { {{ t('contact.errors.nombre.minlength') }} }
+                @default { {{ t('contact.errors.generic') }} }
+              }
+            </div>
+          }
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="tel">Mensaje:</label>
-          <textarea class="form-control" rows="10"></textarea>
+          <label class="form-label" for="asunto">
+            {{ t('contact.fields.asunto.label') }}
+          </label>
+          <input
+            id="asunto"
+            type="text"
+            class="form-control"
+            formControlName="asunto"
+            [placeholder]="t('contact.fields.asunto.placeholder')"
+            [class.is-invalid]="hasError('asunto')"
+            [class.is-valid]="isValid('asunto')"
+          >
+          @if (hasError('asunto')) {
+            <div class="invalid-feedback">
+              @switch (getError('asunto')) {
+                @case ('required') { {{ t('contact.errors.asunto.required') }} }
+                @case ('minlength') { {{ t('contact.errors.asunto.minlength') }} }
+                @default { {{ t('contact.errors.generic') }} }
+              }
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="email">
+            {{ t('contact.fields.email.label') }}
+          </label>
+          <input
+            id="email"
+            type="email"
+            class="form-control"
+            formControlName="email"
+            [placeholder]="t('contact.fields.email.placeholder')"
+            [class.is-invalid]="hasError('email')"
+            [class.is-valid]="isValid('email')"
+          >
+          @if (hasError('email')) {
+            <div class="invalid-feedback">
+              @switch (getError('email')) {
+                @case ('required') { {{ t('contact.errors.email.required') }} }
+                @case ('email') { {{ t('contact.errors.email.email') }} }
+                @default { {{ t('contact.errors.generic') }} }
+              }
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="telefono">
+            {{ t('contact.fields.telefono.label') }}
+          </label>
+          <input
+            id="telefono"
+            type="tel"
+            class="form-control"
+            formControlName="telefono"
+            [placeholder]="t('contact.fields.telefono.placeholder')"
+            [class.is-invalid]="hasError('telefono')"
+            [class.is-valid]="isValid('telefono')"
+          >
+          @if (hasError('telefono')) {
+            <div class="invalid-feedback">
+              @switch (getError('telefono')) {
+                @case ('required') { {{ t('contact.errors.telefono.required') }} }
+                @case ('pattern') { {{ t('contact.errors.telefono.pattern') }} }
+                @default { {{ t('contact.errors.generic') }} }
+              }
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="mensaje">
+            {{ t('contact.fields.mensaje.label') }}
+          </label>
+          <textarea
+            id="mensaje"
+            rows="8"
+            class="form-control"
+            formControlName="mensaje"
+            [placeholder]="t('contact.fields.mensaje.placeholder')"
+            [class.is-invalid]="hasError('mensaje')"
+            [class.is-valid]="isValid('mensaje')"
+          ></textarea>
+          @if (hasError('mensaje')) {
+            <div class="invalid-feedback">
+              @switch (getError('mensaje')) {
+                @case ('required') { {{ t('contact.errors.mensaje.required') }} }
+                @case ('minlength') { {{ t('contact.errors.mensaje.minlength') }} }
+                @default { {{ t('contact.errors.generic') }} }
+              }
+            </div>
+          }
         </div>
       </fieldset>
 
-      <fieldset>
-        <legend class="bg-primary text-center text-white fs-2">País</legend>
+      <fieldset class="mb-5">
+        <legend class="bg-primary text-center text-white fs-2 py-2 px-3">
+          {{ t('contact.sections.country') }}
+        </legend>
 
         <div class="mb-3">
-          <label class="form-label" for="pais">País:</label>
-          <select class="form-control" id="pais">
-            <option value="">--Seleccione--</option>
-            <option value="MX">México</option>
-            <option value="PR">Perú</option>
-            <option value="CO">Colombia</option>
-            <option value="AR">Argentina</option>
-            <option value="ES">España</option>
-            <option value="CL">Chile</option>
+          <label class="form-label" for="pais">
+            {{ t('contact.fields.pais.label') }}
+          </label>
+          <select
+            id="pais"
+            class="form-select"
+            formControlName="pais"
+            [class.is-invalid]="hasError('pais')"
+            [class.is-valid]="isValid('pais')"
+          >
+            <option value="">{{ t('contact.fields.pais.placeholder') }}</option>
+            <option value="MX">{{ t('contact.countries.mx') }}</option>
+            <option value="PE">{{ t('contact.countries.pe') }}</option>
+            <option value="CO">{{ t('contact.countries.co') }}</option>
+            <option value="AR">{{ t('contact.countries.ar') }}</option>
+            <option value="ES">{{ t('contact.countries.es') }}</option>
+            <option value="CL">{{ t('contact.countries.cl') }}</option>
           </select>
+
+          @if (hasError('pais')) {
+            <div class="invalid-feedback">
+              {{ t('contact.errors.pais.required') }}
+            </div>
+          }
         </div>
       </fieldset>
 
-      <fieldset>
-        <legend class="bg-primary text-center text-white fs-2">Información Extra</legend>
+      <fieldset class="mb-4">
+        <legend class="bg-primary text-center text-white fs-2 py-2 px-3">
+          {{ t('contact.sections.extra') }}
+        </legend>
 
-        <div class="mb-3">
-          <label class="form-label" for="cliente">Cliente:</label>
-          <input name="tipo" type="radio" class="form-check-input" id="cliente" >
+        <div class="form-check mb-3">
+          <input
+            id="cliente"
+            class="form-check-input"
+            type="radio"
+            value="cliente"
+            formControlName="tipo"
+          >
+          <label class="form-check-label" for="cliente">
+            {{ t('contact.fields.tipo.cliente') }}
+          </label>
         </div>
 
-        <div class="mb-3">
-          <label class="form-label" for="proveedor">Proveedor:</label>
-          <input name="tipo" type="radio" class="form-check-input" id="proveedor" >
+        <div class="form-check mb-3">
+          <input
+            id="proveedor"
+            class="form-check-input"
+            type="radio"
+            value="proveedor"
+            formControlName="tipo"
+          >
+          <label class="form-check-label" for="proveedor">
+            {{ t('contact.fields.tipo.proveedor') }}
+          </label>
         </div>
 
+        @if (hasError('tipo')) {
+          <div class="text-danger small">
+            {{ t('contact.errors.tipo.required') }}
+          </div>
+        }
       </fieldset>
 
       <div class="d-grid d-md-flex">
-        <input class="btn btn-secondary fs-2 px-5 mt-5" type="submit" value="Enviar Formulario">
+        <button
+          class="btn btn-secondary fs-4 px-5 mt-4"
+          type="submit"
+        >
+          {{ t('contact.submit') }}
+        </button>
       </div>
+
+      @if (submitted() && !formValid()) {
+        <div class="alert alert-danger mt-4 mb-0" role="alert">
+          {{ t('contact.errors.formInvalid') }}
+        </div>
+      }
     </form>
   </div>
-
 </main>

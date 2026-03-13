@@ -51,5 +51,82 @@
       "security": "Trust and Security"
     },
     "copyright": "All rights reserved. TiendaMuebles"
+  },
+  "contact": {
+    "title": "Contact",
+    "submit": "Send form",
+    "sections": {
+      "data": "Your Details",
+      "country": "Country",
+      "extra": "Extra Information"
+    },
+    "fields": {
+      "nombre": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "asunto": {
+        "label": "Subject",
+        "placeholder": "Your subject"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Your email"
+      },
+      "telefono": {
+        "label": "Phone",
+        "placeholder": "Your phone"
+      },
+      "mensaje": {
+        "label": "Message",
+        "placeholder": "Write your message"
+      },
+      "pais": {
+        "label": "Country",
+        "placeholder": "-- Select --"
+      },
+      "tipo": {
+        "cliente": "Customer",
+        "proveedor": "Supplier"
+      }
+    },
+    "countries": {
+      "mx": "Mexico",
+      "pe": "Peru",
+      "co": "Colombia",
+      "ar": "Argentina",
+      "es": "Spain",
+      "cl": "Chile"
+    },
+    "errors": {
+      "generic": "There was an error in this field.",
+      "formInvalid": "Please review the form before submitting.",
+      "nombre": {
+        "required": "Name is required.",
+        "minlength": "Name must be at least 3 characters long."
+      },
+      "asunto": {
+        "required": "Subject is required.",
+        "minlength": "Subject must be at least 3 characters long."
+      },
+      "email": {
+        "required": "Email is required.",
+        "email": "Please enter a valid email."
+      },
+      "telefono": {
+        "required": "Phone is required.",
+        "pattern": "Please enter a valid phone number."
+      },
+      "mensaje": {
+        "required": "Message is required.",
+        "minlength": "Message must be at least 10 characters long."
+      },
+      "pais": {
+        "required": "You must select a country."
+      },
+      "tipo": {
+        "required": "You must select a contact type."
+      }
+    }
   }
 }

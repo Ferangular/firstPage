@@ -51,6 +51,84 @@
       "security": "Confianza y Seguridad"
     },
     "copyright": "Todos los derechos reservados. TiendaMuebles"
-  }
+  },
 
+  "contact": {
+    "title": "Contacto",
+    "submit": "Enviar formulario",
+    "sections": {
+      "data": "Tus Datos",
+      "country": "País",
+      "extra": "Información Extra"
+    },
+    "fields": {
+      "nombre": {
+        "label": "Nombre",
+        "placeholder": "Tu nombre"
+      },
+      "asunto": {
+        "label": "Asunto",
+        "placeholder": "Tu asunto"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Tu email"
+      },
+      "telefono": {
+        "label": "Teléfono",
+        "placeholder": "Tu teléfono"
+      },
+      "mensaje": {
+        "label": "Mensaje",
+        "placeholder": "Escribe tu mensaje"
+      },
+      "pais": {
+        "label": "País",
+        "placeholder": "-- Seleccione --"
+      },
+      "tipo": {
+        "cliente": "Cliente",
+        "proveedor": "Proveedor"
+      }
+    },
+    "countries": {
+      "mx": "México",
+      "pe": "Perú",
+      "co": "Colombia",
+      "ar": "Argentina",
+      "es": "España",
+      "cl": "Chile"
+    },
+    "errors": {
+      "generic": "Hubo un error en este campo.",
+      "formInvalid": "Revisa el formulario antes de enviarlo.",
+      "nombre": {
+        "required": "El nombre es obligatorio.",
+        "minlength": "El nombre debe tener al menos 3 caracteres."
+      },
+      "asunto": {
+        "required": "El asunto es obligatorio.",
+        "minlength": "El asunto debe tener al menos 3 caracteres."
+      },
+      "email": {
+        "required": "El email es obligatorio.",
+        "email": "Introduce un email válido."
+      },
+      "telefono": {
+        "required": "El teléfono es obligatorio.",
+        "pattern": "Introduce un teléfono válido."
+      },
+      "mensaje": {
+        "required": "El mensaje es obligatorio.",
+        "minlength": "El mensaje debe tener al menos 10 caracteres."
+      },
+      "pais": {
+        "required": "Debes seleccionar un país."
+      },
+      "tipo": {
+        "required": "Debes seleccionar un tipo de contacto."
+      }
+    }
+
+}
 }
