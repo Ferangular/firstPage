@@ -51,6 +51,7 @@
     "lint-staged": "^16.3.3",
     "prettier": "^3.8.1",
     "prettier-plugin-organize-imports": "^4.3.0",
+    "sass": "^1.98.0",
     "serve": "^14.2.6",
     "typescript": "~5.9.2",
     "typescript-eslint": "8.56.1",
