@@ -1,0 +1,77 @@
+<main class="container-xl py-5">
+  <h2 class="text-center my-5">Galería</h2>
+
+  @defer (on viewport) {
+    <ul class="row list-unstyled galeria">
+      @for (imagen of imagenes; track imagen.id) {
+        <li class="col-md-6 col-lg-4 mb-4">
+          <button
+            type="button"
+            class="border-0 bg-transparent p-0 w-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-imagen"
+            (click)="seleccionarImagen(imagen)"
+            [attr.aria-label]="'Abrir imagen ' + imagen.id + ' en modal'"
+          >
+            <img
+              class="img-fluid"
+              [src]="'assets/images/' + imagen.nombre + '.jpg'"
+              [alt]="imagen.alt"
+              loading="lazy"
+              width="600"
+              height="400"
+            >
+          </button>
+        </li>
+      }
+    </ul>
+  } @placeholder {
+    <div class="text-center">
+      <p class="mb-0">Cargando galería...</p>
+    </div>
+  }
+</main>
+
+<div
+  class="modal fade"
+  id="modal-imagen"
+  tabindex="-1"
+  aria-labelledby="modalImagenLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalImagenLabel" class="modal-title fs-5">
+          Vista ampliada
+        </h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Cerrar imagen ampliada"
+        ></button>
+      </div>
+
+      <div class="modal-body text-center">
+        @if (imagenSeleccionada) {
+          <img
+            class="img-fluid"
+            [src]="'assets/images/' + imagenSeleccionada.nombre + '.jpg'"
+            [alt]="imagenSeleccionada.alt"
+            width="1200"
+            height="800"
+          >
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-imagen">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "nosotros": "About Us",
+    "tienda": "Shop",
+    "blog": "Blog",
+    "galeria": "Gallery",
+    "contacto": "Contact"
+  },
+  "shop": {
+    "title": "Our Products",
+    "addCart": "Add to cart",
+    "product": "Product",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti sed recusandae vitae architecto molestiae, eos corrupti"
+  },
+  "about": {
+    "title": "About Us",
+    "imageAlt": "About us image",
+    "paragraph1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem autem minus aliquam cumque ducimus dolores, laboriosam soluta eaque itaque modi corrupti ut. Aliquam a dignissimos consequuntur, debitis mollitia dicta.",
+    "paragraph2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dignissimos non voluptatum corrupti, quas facere voluptas voluptate vel similique, fugit harum ratione exercitationem! Atque quod, repellendus adipisci tempora ipsa qui?"
+  },
+
+  "home": {
+    "productsTitle": "Our Products",
+    "addCart": "Add to cart",
+    "productName": "Product {{id}}",
+    "productAlt": "Image of product {{id}}",
+    "productDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti sed recusandae vitae architecto molestiae, eos corrupti"
+  },
+  "footer": {
+    "categories": {
+      "title": "Categories",
+      "cocina": "Kitchen",
+      "oficina": "Office",
+      "jardin": "Garden",
+      "cochera": "Garage",
+      "dormitorios": "Bedrooms"
+    },
+    "about": {
+      "title": "About Us",
+      "historia": "Our History",
+      "mision": "Mission, Vision and Values",
+      "carreras": "Careers",
+      "privacidad": "Privacy Policy",
+      "terminos": "Terms of Service"
+    },
+    "support": {
+      "title": "Support",
+      "faq": "FAQ",
+      "help": "Online Help",
+      "security": "Trust and Security"
+    },
+    "copyright": "All rights reserved. TiendaMuebles"
+  }
+}

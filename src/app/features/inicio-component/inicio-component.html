@@ -1,0 +1,82 @@
+<main class="container-xl py-5" *transloco="let t">
+  <h2 class="text-center my-5">
+    {{ t('home.productsTitle') }}
+  </h2>
+
+  <div class="row g-0 pt-5 mb-4">
+    <div class="col-md-8 producto">
+      <img
+        class="img-fluid"
+        [src]="'assets/images/' + productoDestacado.imagen"
+        [alt]="t('home.productAlt', { id: productoDestacado.id })"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="col-md-4 bg-primary text-center p-5 text-white d-flex flex-column justify-content-center">
+      <h3>{{ t('home.productName', { id: productoDestacado.id }) }}</h3>
+
+      <p>{{ t('home.productDescription') }}</p>
+
+      <p class="fs-1 fw-bold">$12,000.00</p>
+
+      <button type="button" class="btn btn-success fs-3 fw-bold text-uppercase py-3">
+        {{ t('home.addCart') }}
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    @for (producto of productosFilaDos; track producto.id) {
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            class="card-img-top"
+            [src]="'assets/images/' + producto.imagen"
+            [alt]="t('home.productAlt', { id: producto.id })"
+            loading="lazy"
+          >
+
+          <div class="card-body text-center bg-primary text-white p-5 d-flex flex-column">
+            <h3>{{ t('home.productName', { id: producto.id }) }}</h3>
+
+            <p>{{ t('home.productDescription') }}</p>
+
+            <p class="fs-1 fw-bold">$12,000.00</p>
+
+            <button type="button" class="btn btn-success fs-3 fw-bold text-uppercase py-3 w-100 mt-auto">
+              {{ t('home.addCart') }}
+            </button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="row">
+    @for (producto of productosFilaTres; track producto.id) {
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img
+            class="card-img-top"
+            [src]="'assets/images/' + producto.imagen"
+            [alt]="t('home.productAlt', { id: producto.id })"
+            loading="lazy"
+          >
+
+          <div class="card-body text-center bg-primary text-white p-5 d-flex flex-column">
+            <h3>{{ t('home.productName', { id: producto.id }) }}</h3>
+
+            <p>{{ t('home.productDescription') }}</p>
+
+            <p class="fs-1 fw-bold">$12,000.00</p>
+
+            <button type="button" class="btn btn-success fs-3 fw-bold text-uppercase py-3 w-100 mt-auto">
+              {{ t('home.addCart') }}
+            </button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</main>

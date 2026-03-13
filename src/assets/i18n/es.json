@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "nosotros": "Nosotros",
+    "tienda": "Tienda",
+    "blog": "Blog",
+    "galeria": "Galería",
+    "contacto": "Contacto"
+  },
+  "shop": {
+    "title": "Nuestros Productos",
+    "addCart": "Agregar al carrito",
+    "product": "Producto",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti sed recusandae vitae architecto molestiae, eos corrupti"
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "imageAlt": "Imagen sobre nosotros",
+    "paragraph1": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem autem minus aliquam cumque ducimus dolores, laboriosam soluta eaque itaque modi corrupti ut. Aliquam a dignissimos consequuntur, debitis mollitia dicta.",
+    "paragraph2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dignissimos non voluptatum corrupti, quas facere voluptas voluptate vel similique, fugit harum ratione exercitationem! Atque quod, repellendus adipisci tempora ipsa qui?"
+  },
+
+  "home": {
+    "productsTitle": "Nuestros Productos",
+    "addCart": "Agregar al carrito",
+    "productName": "Producto {{id}}",
+    "productAlt": "Imagen del producto {{id}}",
+    "productDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti sed recusandae vitae architecto molestiae, eos corrupti"
+  },
+  "footer": {
+    "categories": {
+      "title": "Categorías",
+      "cocina": "Cocina",
+      "oficina": "Oficina",
+      "jardin": "Jardín",
+      "cochera": "Cochera",
+      "dormitorios": "Dormitorios"
+    },
+    "about": {
+      "title": "Sobre Nosotros",
+      "historia": "Nuestra Historia",
+      "mision": "Misión, Visión y Valores",
+      "carreras": "Carreras",
+      "privacidad": "Política de Privacidad",
+      "terminos": "Términos del Servicio"
+    },
+    "support": {
+      "title": "Soporte",
+      "faq": "Preguntas Frecuentes",
+      "help": "Ayuda en Línea",
+      "security": "Confianza y Seguridad"
+    },
+    "copyright": "Todos los derechos reservados. TiendaMuebles"
+  }
+
+}

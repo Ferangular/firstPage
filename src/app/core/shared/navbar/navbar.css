@@ -1,0 +1,26 @@
+:host {
+  width: 100%;
+}
+
+.nav-link-custom {
+  color: #000;
+  text-decoration: none;
+  /*font-size: 1.1rem;*/
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link-custom:hover {
+  color: var(--bs-primary);
+}
+
+.active-link {
+  /*font-weight: 700;*/
+  color: var(--bs-primary) !important;
+}
+
+.btn-group .btn.active {
+  color: #fff;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}

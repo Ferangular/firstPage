@@ -1,0 +1,84 @@
+<div id="navegacion" class="collapse navbar-collapse">
+  <div class="row align-items-center w-100 gx-4 gy-3">
+    <div class="col-12 col-lg-10">
+      <nav
+        class="d-flex flex-column flex-md-row justify-content-center justify-content-lg-between align-items-center text-center gap-4"
+        aria-label="Navegación principal"
+        *transloco="let t"
+      >
+        <a
+          class="nav-link-custom"
+          routerLink="/"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ t('nav.inicio') }}
+        </a>
+
+        <a
+          class="nav-link-custom"
+          routerLink="/nosotros"
+          routerLinkActive="active-link"
+        >
+          {{ t('nav.nosotros') }}
+        </a>
+
+        <a
+          class="nav-link-custom"
+          routerLink="/tienda"
+          routerLinkActive="active-link"
+        >
+          {{ t('nav.tienda') }}
+        </a>
+
+        <a
+          class="nav-link-custom"
+          routerLink="/blog"
+          routerLinkActive="active-link"
+        >
+          {{ t('nav.blog') }}
+        </a>
+
+        <a
+          class="nav-link-custom"
+          routerLink="/galeria"
+          routerLinkActive="active-link"
+        >
+          {{ t('nav.galeria') }}
+        </a>
+
+        <a
+          class="nav-link-custom"
+          routerLink="/contacto"
+          routerLinkActive="active-link"
+        >
+          {{ t('nav.contacto') }}
+        </a>
+      </nav>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <div class="d-flex justify-content-center justify-content-lg-end">
+        <div class="btn-group btn-group-sm" role="group" aria-label="Selector de idioma">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            [class.active]="activeLang === 'es'"
+            (click)="changeLang('es')"
+          >
+            ES
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            [class.active]="activeLang === 'en'"
+            (click)="changeLang('en')"
+          >
+            EN
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

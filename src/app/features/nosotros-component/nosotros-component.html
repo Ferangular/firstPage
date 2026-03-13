@@ -1,0 +1,23 @@
+<main class="container-xl py-5" *transloco="let t">
+  <h2 class="text-center my-5">
+    {{ t('about.title') }}
+  </h2>
+
+  <div class="row g-5 align-items-center">
+    <div class="col-md-6">
+      <img
+        class="img-fluid"
+        src="assets/images/nosotros.jpg"
+        [alt]="t('about.imageAlt')"
+        loading="lazy"
+        width="800"
+        height="600"
+      >
+    </div>
+
+    <div class="col-md-6">
+      <p>{{ t('about.paragraph1') }}</p>
+      <p>{{ t('about.paragraph2') }}</p>
+    </div>
+  </div>
+</main>
