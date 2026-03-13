@@ -19,6 +19,7 @@ La aplicación incluye soporte **multilenguaje (ES / EN)** mediante **Transloco*
 ---
 
 # Estructura del proyecto
+```bash
 src
 ├ app
 │ ├ features
@@ -42,7 +43,7 @@ src
 └ i18n
 ├ es.json
 └ en.json
-
+```
 
 ---
 
