@@ -1,2 +1,38 @@
+<app-header />
+
+
+<div class="border-top py-4">
+  <div class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid px-4">
+      <a
+        class="navbar-brand nombre-sitio d-lg-none fs-2 fw-bold text-uppercase"
+        routerLink="/"
+      >
+        Tienda Muebles
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navegacion"
+        aria-controls="navegacion"
+        aria-expanded="false"
+        aria-label="Mostrar navegación"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <app-navbar></app-navbar>
+    </div>
+  </div>
+</div>
+
+<div class="hero"></div>
 
 <router-outlet />
+
+
+<app-footer />
+
+
