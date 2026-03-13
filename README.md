@@ -1,59 +1,131 @@
-# FirstPage
+# Tienda Muebles – Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+Aplicación web desarrollada con **Angular 21** y **Bootstrap 5** basada en el proyecto del curso, adaptada a una arquitectura moderna de Angular.
 
-## Development server
+La aplicación incluye soporte **multilenguaje (ES / EN)** mediante **Transloco**.
 
-To start a local development server, run:
+---
+
+# Tecnologías
+
+- Angular 21
+- Angular CLI
+- Bootstrap 5
+- Transloco (i18n)
+- Angular Standalone Components
+- Angular Control Flow (`@for`, `@if`)
+- Responsive design
+
+---
+
+# Estructura del proyecto
+src
+├ app
+│ ├ features
+│ │ ├ inicio-component
+│ │ ├ tienda-component
+│ │ ├ nosotros-component
+│ │ ├ blog-component
+│ │ ├ entrada-component
+│ │ ├ galeria-component
+│ │ └ contacto-component
+│ │
+│ ├ shared
+│ │ ├ navbar
+│ │ ├ header
+│ │ └ footer
+│ │
+│ └ app.routes.ts
+│
+└ assets
+├ images
+└ i18n
+├ es.json
+└ en.json
+
+
+---
+
+# Funcionalidades
+
+## Multilenguaje
+
+La aplicación soporta **Español e Inglés** usando Transloco.
+
+Los archivos de traducción se encuentran en:
+
+src/assets/i18n
+
+El idioma se puede cambiar desde el **selector del navbar**.
+
+---
+
+## Navegación
+
+La navegación se gestiona mediante **Angular Router**.
+
+Rutas disponibles:
+
+/ → Inicio
+/nosotros → Sobre nosotros
+/tienda → Tienda
+/blog → Blog
+/galeria → Galería
+/contacto → Contacto
+
+
+---
+
+## Componentes principales
+
+| Componente | Descripción |
+|-------------|-------------|
+| Header | Encabezado de la página |
+| Navbar | Navegación principal + selector de idioma |
+| Inicio | Página principal con productos destacados |
+| Tienda | Catálogo de productos |
+| Nosotros | Información de la empresa |
+| Blog | Listado de artículos |
+| Galería | Galería de imágenes |
+| Contacto | Formulario de contacto |
+| Footer | Enlaces informativos |
+
+---
+
+# Instalación
+
+Clonar el repositorio:
 
 ```bash
-ng serve
+git clone <repo>
+cd firstPage
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Accesibilidad y buenas prácticas
 
-```bash
-ng generate --help
-```
+El proyecto incluye:
 
-## Building
+etiquetas alt en imágenes
 
-To build the project run:
+navegación accesible
 
-```bash
-ng build
-```
+uso de aria-label
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+lazy loading en imágenes
 
-## Running unit tests
+estructura semántica HTML
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Recursos
 
-```bash
-ng test
-```
+Angular CLI
+https://angular.dev/tools/cli
 
-## Running end-to-end tests
+Bootstrap
+https://getbootstrap.com
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Transloco
+https://jsverse.gitbook.io/transloco
