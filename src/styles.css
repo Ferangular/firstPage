@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+:root {
+  --primario: #660ef2;
+  --secundario: #ffb100;
+  --fuente:    'Roboto', sans-serif;
+}
+body {
+  font-family: var(--fuente);
+}
+.header {
+  background-color: var(--primario)!important;
+
+}
+
+.header h1 {
+  color: var(--secundario);
+  font-weight: 900;
+}
+.header p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.heading {
+  font-weight: 900;
+  color: var(--primario);
+}
+
+.seccion {
+  padding: 1rem 0;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
