@@ -1,0 +1,56 @@
+@use "../../../styles/base/variables" as v;
+@use "../../../styles/base/mixins" as m;
+
+.site-header {
+  @include m.bgImage("/assets/images/header.jpg", v.$secundarioOpacity);
+  padding: 5rem 0;
+
+  .contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header-grid {
+    @include m.tablet {
+      @include m.grid(2, 4rem);
+      align-items: center;
+    }
+
+    @include m.desktop {
+      @include m.grid(1, 10rem);
+      align-items: center;
+    }
+  }
+
+  .logo {
+    max-width: 20rem;
+    margin: 0 auto;
+    @include m.tablet {
+      margin: 0;
+    }
+  }
+  .contenido-header {
+    padding: 10rem 0;
+    text-align: center;
+    @include m.tablet {
+      text-align: left;
+      padding: 0;
+    }
+    @include m.desktop {
+      padding: 0;
+    }
+
+    h1 {
+      color: v.$blanco;
+      font-size: 4.5rem;
+      @include m.tablet {
+        font-size: 6rem;
+        max-width: 50%;
+      }
+      @include m.desktop {
+        max-width: 40%;
+      }
+    }
+  }
+}
