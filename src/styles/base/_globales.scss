@@ -1,5 +1,6 @@
 @use "variables" as v;
 @use "mixins" as m;
+@use "text-utilities";
 
 html {
   font-size: 62.5%;

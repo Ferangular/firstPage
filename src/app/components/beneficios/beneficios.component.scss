@@ -21,9 +21,10 @@
     grid-column: 4 / 6;
     transition-property: transform;
     transition-duration: 0.3s;
+    transform: translateZ(0); /* Habilitar GPU acceleration */
 
     &:hover {
-      transform: rotate(8deg) scale(1.1);
+      transform: rotate(8deg) scale(1.1) translateZ(0);
     }
   }
 }

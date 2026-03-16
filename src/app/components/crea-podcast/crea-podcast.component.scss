@@ -1,5 +1,6 @@
 @use "../../../styles/base/variables" as v;
 @use "../../../styles/base/mixins" as m;
+@use "../../../styles/base/text-utilities";
 
 .crea-grid {
   @include m.tablet {
@@ -9,5 +10,10 @@
 
   h2 {
     @include m.headingBorder(v.$secundario, v.$primario);
+    color: v.$blanco;
+  }
+
+  p {
+    color: v.$blanco;
   }
 }
