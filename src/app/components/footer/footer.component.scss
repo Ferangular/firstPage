@@ -1,0 +1,14 @@
+footer {
+  background: #212529;
+  color: #ffffff;
+
+  .text-light {
+    color: #ffffff !important;
+    text-decoration: none;
+
+    &:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  }
+}

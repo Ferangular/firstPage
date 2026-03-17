@@ -1,24 +1,7 @@
-// Bootstrap Custom - Grid y Buttons
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/utilities";
+/* Estilos globales */
+@use "bootstrap/dist/css/bootstrap";
 
-// Layout & components necesarios
-@import "bootstrap/scss/root";
-@import "bootstrap/scss/reboot";
-@import "bootstrap/scss/type";
-@import "bootstrap/scss/grid";
-@import "bootstrap/scss/buttons";
-
-// Helpers
-@import "bootstrap/scss/helpers";
-
-// Utilities
-@import "bootstrap/scss/utilities/api";
-
-// Estilos personalizados
+/* Estilos personalizados */
 .container-custom {
   max-width: 1200px;
   margin: 0 auto;

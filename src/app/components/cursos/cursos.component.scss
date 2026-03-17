@@ -1,0 +1,48 @@
+.listado-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+
+  .curso {
+    .card {
+      border: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-body {
+        .titulo {
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+
+        .instructor {
+          color: #666;
+          font-size: 0.9rem;
+        }
+
+        .calificacion {
+          width: 80px;
+          height: 16px;
+        }
+
+        .precio {
+          color: #a435f0;
+          font-size: 1.2rem;
+
+          .original {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
