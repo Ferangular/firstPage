@@ -1,0 +1,16 @@
+@use "../custom" as *;
+
+// Estilos para la página de tienda
+main.container-xxl {
+  h2 {
+    color: $primary !important;
+  }
+
+  h3.text-black {
+    color: $primary !important;
+  }
+
+  .text-primary {
+    color: $primary !important;
+  }
+}

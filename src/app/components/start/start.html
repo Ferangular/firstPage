@@ -1,0 +1,64 @@
+<main class="container-xl mt-5">
+  <h2 class="text-center">{{ 'start.collection' | transloco }}</h2>
+
+  <div class="row mt-5">
+    @for (guitarra of guitarras(); track guitarra.id) {
+      <div class="col-md-6 col-lg-4 my-4 row align-items-center">
+        <div class="col-4">
+          <img class="img-fluid" src="assets/img/{{ guitarra.imagen }}" alt="{{ 'common.guitarImage' | transloco }}" />
+        </div>
+        <div class="col-8">
+          <h3 class="text-black fs-4 fw-bold text-uppercase">{{ guitarra.nombre }}</h3>
+          <p>{{ guitarra.descripcion }}</p>
+          <p class="fw-black text-warning fs-3">${{ guitarra.precio }}</p>
+          <div
+            class="bg-black d-block text-center text-white p-2 text-uppercase fw-black"
+            [routerLink]="['/producto', guitarra.id]"
+          >
+            {{ 'tienda.seeProduct' | transloco }}
+          </div>
+        </div>
+      </div>
+      <!-- FIN GUITARRA -->
+    }
+  </div>
+</main>
+
+<section class="cursos">
+  <div class="container-xl">
+    <div class="row justify-content-md-end">
+      <div class="col-md-6 text-center">
+        <h3>{{ 'start.learnGuitar' | transloco }}</h3>
+        <p class="text-white mt-3 fs-5">{{ 'start.courseDescription' | transloco }}</p>
+
+        <a class="bg-primary text-white py-2 px-5 mt-2 fw-black text-uppercase" href="#">
+          {{ 'start.moreInfo' | transloco }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container-xl mt-5">
+  <h2 class="text-center">{{ 'start.ourBlog' | transloco }}</h2>
+
+  <div class="row mt-5">
+    @for (post of blogPosts(); track post.id) {
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/{{ post.imagen }}" alt="{{ 'common.blogImage' | transloco }}" />
+
+          <div class="card-body">
+            <h3 class="text-black fw-normal fs-4">{{ post.titulo }}</h3>
+            <p class="text-primary">{{ post.fecha }}</p>
+            <p>{{ post.extracto }}</p>
+            <div class="btn btn-primary d-block text-white text-uppercase fs-6 mt-4" routerLink="/entrada">
+              {{ 'blog.readEntry' | transloco }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--.col-md-6-->
+    }
+  </div>
+</section>

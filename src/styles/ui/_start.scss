@@ -1,0 +1,26 @@
+@use "../custom" as *;
+
+// Estilos para la página de inicio
+main.container-xl {
+  h2 {
+    color: $primary !important;
+  }
+
+  .text-primary {
+    color: $primary !important;
+  }
+}
+
+// Estilos para las tarjetas del blog
+.card {
+  .btn-primary {
+    color: white !important;
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    &:hover {
+      color: white !important;
+      background-color: var(--bs-primary-hover, var(--bs-primary)) !important;
+      border-color: var(--bs-primary-hover, var(--bs-primary)) !important;
+    }
+  }
+}

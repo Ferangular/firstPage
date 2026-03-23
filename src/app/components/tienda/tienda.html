@@ -1,0 +1,25 @@
+<main class="container-xxl mt-5">
+  <h2 class="text-center">{{ 'tienda.ourProducts' | transloco }}</h2>
+
+  <div class="row mt-5">
+    @for (guitarra of guitarras(); track guitarra.id) {
+      <div class="col-md-6 col-lg-4 my-4 row align-items-center">
+        <div class="col-4">
+          <img class="img-fluid" src="assets/img/{{ guitarra.imagen }}" alt="{{ 'common.guitarImage' | transloco }}" />
+        </div>
+        <div class="col-8">
+          <h3 class="text-black fs-4 fw-bold text-uppercase">{{ guitarra.nombre }}</h3>
+          <p>{{ guitarra.descripcion }}</p>
+          <p class="fw-black text-primary fs-3">${{ guitarra.precio }}</p>
+          <div
+            class="bg-black d-block text-center p-2 text-uppercase fw-black"
+            [routerLink]="['/producto', guitarra.id]"
+          >
+            {{ 'tienda.seeProduct' | transloco }}
+          </div>
+        </div>
+      </div>
+      <!-- FIN GUITARRA -->
+    }
+  </div>
+</main>

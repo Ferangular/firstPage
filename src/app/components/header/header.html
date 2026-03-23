@@ -1,0 +1,58 @@
+<header class="py-5 header">
+  <div class="container-xl">
+    <div class="row justify-content-center justify-content-md-between">
+      <div class="col-8 col-md-3">
+        <a routerLink="/">
+          <img class="img-fluid" src="assets/img/logo.svg" alt="{{ 'common.logoImage' | transloco }}" />
+        </a>
+      </div>
+      <nav
+        class="col-md-6 d-flex flex-column align-items-center mt-5 mt-md-0 flex-md-row justify-content-md-end navegacion"
+      >
+        <a class="d-block px-2 py-1 fs-6 fw-bold text-uppercase" routerLink="/">{{ 'navigation.home' | transloco }}</a>
+        <a class="d-block px-2 py-1 fs-6 fw-bold text-uppercase" routerLink="/nosotros">
+          {{ 'navigation.about' | transloco }}
+        </a>
+        <a class="d-block px-2 py-1 fs-6 fw-bold text-uppercase" routerLink="/blog">
+          {{ 'navigation.blog' | transloco }}
+        </a>
+        <a class="d-block px-2 py-1 fs-6 fw-bold text-uppercase" routerLink="/tienda">
+          {{ 'navigation.store' | transloco }}
+        </a>
+        <div class="dropdown text-light">
+          <button
+            class="btn btn-link d-block px-2 py-1 fs-6 fw-bold text-light text-uppercase dropdown-toggle"
+            type="button"
+            id="languageDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {{ getCurrentLanguage() === 'es' ? 'ES' : 'EN' }}
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li>
+              <a class="dropdown-item" href="#" (click)="changeLanguage('en'); $event.preventDefault()">English</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" (click)="changeLanguage('es'); $event.preventDefault()">Español</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--.row-->
+
+    <div class="row mt-5">
+      <div class="col-md-6 text-center text-md-start pt-5">
+        <h1 class="display-2 fw-bold">{{ 'header.title' | transloco }}</h1>
+        <p class="mt-5 fs-5 text-white">{{ 'header.description' | transloco }}</p>
+        <p class="text-primary fs-1 fw-black">$399</p>
+        <button class="btn btn-dark fs-4 text-white py-2 px-5" href="/producto">
+          {{ 'header.seeProduct' | transloco }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <img class="header-guitarra" src="assets/img/header_guitarra.png" alt="{{ 'common.headerImage' | transloco }}" />
+</header>

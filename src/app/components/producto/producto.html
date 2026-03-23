@@ -1,0 +1,51 @@
+@if (producto()) {
+  <main class="container-xl mt-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-4 col-md-2">
+        <img class="img-fluid" src="assets/img/{{ producto()!.imagen }}" alt="{{ 'common.guitarImage' | transloco }}" />
+      </div>
+      <div class="col-8 col-md-4">
+        <h3 class="text-black fs-4 fw-bold text-uppercase">{{ producto()!.nombre }}</h3>
+        <p>{{ producto()!.descripcion }}</p>
+        <p class="fw-black text-primary fs-3">${{ producto()!.precio }}</p>
+
+        <form class="row" (ngSubmit)="agregarAlCarrito()">
+          <div class="col-12">
+            <div class="form-group">
+              <div class="form-label">{{ 'producto.quantity' | transloco }}</div>
+              <select class="form-control" (change)="onCantidadChange($event)" [value]="cantidadSeleccionada()">
+                <option value="">{{ 'producto.selectOption' | transloco }}</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-12 d-grid">
+            <input
+              type="submit"
+              value="{{ 'producto.addToCart' | transloco }}"
+              class="btn btn-primary text-white text-uppercase fs-6 mt-4 d-block"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+} @else {
+  <main class="container-xl mt-5">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <p class="text-center">{{ 'producto.productNotFound' | transloco }}</p>
+      </div>
+    </div>
+  </main>
+}

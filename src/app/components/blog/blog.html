@@ -1,0 +1,23 @@
+<main class="container-xl mt-5">
+  <h2 class="text-center">{{ 'blog.title' | transloco }}</h2>
+
+  <div class="row mt-5">
+    @for (post of blogPosts(); track post.id) {
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/{{ post.imagen }}" alt="{{ 'common.blogImage' | transloco }}" />
+
+          <div class="card-body">
+            <h3 class="text-black fw-normal fs-4">{{ post.titulo }}</h3>
+            <p class="text-primary">{{ post.fecha }}</p>
+            <p>{{ post.extracto }}</p>
+            <a class="btn btn-primary d-block text-white text-uppercase fs-6 mt-4" routerLink="/entrada">
+              {{ 'blog.readEntry' | transloco }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--.col-md-6-->
+    }
+  </div>
+</main>
