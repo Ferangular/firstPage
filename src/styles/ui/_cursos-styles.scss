@@ -1,0 +1,103 @@
+@use "custom" as *;
+
+// Estilos para la sección de cursos
+.listado-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+
+  .curso {
+    .card {
+      border: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      width: 100%;
+      max-width: 380px;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .card-body {
+        padding: 1rem;
+        .titulo {
+          font-family: $fuente-textos;
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+          line-height: 1.4;
+        }
+
+        .instructor,
+        .total {
+          color: #666;
+          font-size: 0.8rem;
+        }
+
+        .calificacion {
+          width: 6rem;
+          height: 16px;
+        }
+
+        .precio {
+          color: #a435f0;
+          font-size: 0.9rem;
+
+          .original {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Estilos para categorías
+.categorias {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+
+    li {
+      a {
+        .bg-light {
+          padding: 1rem;
+          border-radius: 8px;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Estilos para sección de logos
+.logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+
+  .logo {
+    img {
+      max-height: 40px;
+      object-fit: contain;
+    }
+  }
+}
