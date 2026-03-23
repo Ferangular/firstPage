@@ -1,30 +1,9 @@
 /* Estilos globales */
-@use "bootstrap/dist/css/bootstrap";
-
-/* Estilos personalizados */
-.container-custom {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 3rem 0;
-  text-align: center;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
-.feature-card {
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 8px;
-  height: 100%;
-  transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-}
+@use "bootstrap/scss/bootstrap" with (
+  $primary: #a435f0,
+  $secondary: #b4690e,
+  $light: #f8f9fb,
+  $dark: #000,
+  $enable-cssgrid: true
+);
+@use "./styles/ui" as *;
