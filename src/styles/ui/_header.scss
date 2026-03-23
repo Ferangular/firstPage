@@ -1,0 +1,88 @@
+@use "../custom" as *;
+@use "../base/mixins" as m;
+@use "../base/animaciones" as *;
+
+.header {
+  @include m.background-image("../../assets/img/header.jpg");
+  position: relative;
+
+  .header-guitarra {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      animation-duration: 1s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-name: animarImagen;
+    }
+  }
+}
+
+.navegacion {
+  position: relative;
+  z-index: 1;
+
+  a:not(.btn):not(.btn-primary) {
+    color: white !important;
+    text-decoration: none !important;
+    &:hover {
+      color: inherit !important;
+      text-decoration: none !important;
+      background-color: $primary;
+    }
+  }
+
+  .dropdown {
+    &:hover {
+      background-color: $primary;
+    }
+
+    .btn-link {
+      color: inherit !important;
+      text-decoration: none !important;
+      &:hover {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: rgba(0, 0, 0, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      .dropdown-item {
+        color: white;
+        &:hover {
+          background-color: $primary;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.btn-primary {
+  color: white !important;
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  &:hover {
+    color: white !important;
+    background-color: var(--bs-primary-hover, var(--bs-primary)) !important;
+    border-color: var(--bs-primary-hover, var(--bs-primary)) !important;
+  }
+}
+
+.header {
+  h1 {
+    color: $primary !important;
+  }
+
+  .text-primary {
+    color: $primary !important;
+  }
+}

@@ -1,1 +1,55 @@
-{}
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "blog": "Blog",
+    "store": "Tienda"
+  },
+  "header": {
+    "title": "Modelo VAI",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus quibusdam dolor nemo velit quo, fuga omnis, iure molestias optio tempore sint at ipsa dolorum odio exercitationem eos inventore odit.",
+    "seeProduct": "Ver Producto"
+  },
+  "footer": {
+    "copyright": "Todos los derechos Reservados"
+  },
+  "start": {
+    "collection": "Nuestra Colección",
+    "learnGuitar": "Aprende a tocar guitarra",
+    "courseDescription": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, accusantium harum incidunt suscipit a itaque, consectetur, id molestiae adipisci et obcaecati tempore iste ea nisi corrupti illo asperiores repudiandae odit!",
+    "moreInfo": "Más Información",
+    "ourBlog": "Nuestro Blog"
+  },
+  "tienda": {
+    "ourProducts": "Nuestros Productos",
+    "seeProduct": "Ver Producto"
+  },
+  "producto": {
+    "quantity": "Cantidad:",
+    "selectOption": "-- Seleccione --",
+    "addToCart": "Agregar al Carrito",
+    "productNotFound": "Producto no encontrado"
+  },
+  "nosotros": {
+    "title": "Nosotros",
+    "description1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ut voluptatem corporis ipsa, eaque possimus, quasi, itaque nobis officiis dolorum optio. Non est quis illum optio at a, iste ut?",
+    "description2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ut voluptatem corporis ipsa, eaque possimus, quasi, itaque nobis officiis dolorum optio. Non est quis illum optio at a, iste ut?"
+  },
+  "blog": {
+    "title": "Nuestro Blog",
+    "readEntry": "Leer Entrada"
+  },
+  "entrada": {
+    "title": "Como elegir tu primer guitarra",
+    "date": "20 de enero de 2022",
+    "content1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sequi eligendi nesciunt eveniet ut? Itaque quasi error corporis architecto odit sunt illo. Dicta obcaecati eveniet rerum nulla, nesciunt tenetur nostrum?",
+    "content2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sequi eligendi nesciunt eveniet ut? Itaque quasi error corporis architecto odit sunt illo. Dicta obcaecati eveniet rerum nulla, nesciunt tenetur nostrum?"
+  },
+  "common": {
+    "guitarImage": "imagen guitarra",
+    "blogImage": "imagen blog",
+    "logoImage": "imagen logo",
+    "headerImage": "imagen header",
+    "nosotrosImage": "imagen nosotros"
+  }
+}
