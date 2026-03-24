@@ -1,7 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000/api',
-  featureFlags: {
-    showDebugInfo: true,
-  },
+  jsonFile: 'assets/app-settings/app-settings-dev.json',
 };
