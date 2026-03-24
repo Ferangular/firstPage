@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "fpatino": "ng serve --host 0.0.0.0 --port 4500 --open --configuration fpatino",
     "dev": "ng serve --open",
     "build": "ng build",
     "build:prod": "ng build --configuration production",

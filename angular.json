@@ -65,6 +65,18 @@
               "aot": false,
               "sourceMap": true,
               "extractLicenses": false
+            },
+            "fpatino": {
+              "optimization": false,
+              "aot": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.fpatino.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -77,6 +89,9 @@
             },
             "development": {
               "buildTarget": "firstPage:build:development"
+            },
+            "fpatino": {
+              "buildTarget": "firstPage:build:fpatino"
             }
           },
           "defaultConfiguration": "development"
